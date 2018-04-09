@@ -2,7 +2,7 @@
 
 <div class="container">
 	<div class="searchBox">
-		<p></p>
+		 
 		<label> 
 			<input type="text" placeholder="Search for answers in StackOverflow:" [(ngModel)]="searchItem" (click)="getSearchResults()">
 			<button (click)="getSearchResults()">Search</button>
@@ -21,6 +21,8 @@
 		Tags: <span *ngFor="let questionTags of results.tags" class="questionTags">{{questionTags}} </span>
 		<br />
 		Score: {{results.score}}
+		<br />
+		Number of views: {{results.view_count}}
 		<br />
 		Posted at: {{results.creation_date*1000 | date }}
 		<br /><br />
