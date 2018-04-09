@@ -9,14 +9,32 @@
 }
 
 .searchBox {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+  
+    -webkit-flex-flow: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+	 
 	width: 60%;
 	height: 120px;
-	margin: 0 auto;
-	/*background-color: blue;*/
+	margin: 0 auto; padding: 0;
+	
 }
-
+	.searchField { 
+		width: 70%;
+	}
+	
+	.searchButton {
+		width: 25%;
+	}
+	
+	
 input[type=text] { 
-	width: 80%;
+	width: 100%;
 	height: 60px;
 	border: 5px solid #DAE0F2;
 	line-height: 3;
@@ -24,14 +42,22 @@ input[type=text] {
 }
 
 button {
-	 width: 10%;
+	width: 95%; height: 70px;
     padding: 10px;
-    background: #2196F3;
+    background: #B6C5EF;
     color: white;
     font-size: 17px;
-    border: 1px solid grey;
-    border-left: none;
+    border: 3px solid #DAE0F2;
+	border-radius: 15px;
     cursor: pointer;
+}
+
+.resultsBox {
+	width: 90%;
+	min-height: 100px;
+	background-color: #F7F7F7;
+	padding: 20px;
+	margin: 10px;
 }
 
 .questionTags {
@@ -44,21 +70,33 @@ button {
 @media (max-width: 720px) {
 
   .container {
-		width: 90%;
+		width: 80%;
+		margin: 5px 10px 20px 10px;
+		padding: 5px;
 	}
 
 	.searchBox {
 		width: 90%;
-		height: 60px;
+		 
+	}
+	
+	.searchButton {
+		width: 28%;
 	}
 
 	input[type=text] { 
-		width: 60%;
+		width: 100%;
+		height: 30px;
 	}
 
 	button {
-		width: 5%;
-    
+		margin: 0 0 20px 10px;
+		height: 40px;
+	}
+	
+	.resultsBox {
+		width: 80%;
+	
 	}
 
 }
