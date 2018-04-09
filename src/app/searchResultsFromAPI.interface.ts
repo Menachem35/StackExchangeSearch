@@ -6,4 +6,5 @@ export interface searchResultsFromAPI {
 	title: string;
 	accepted_answer_id: number;
 	creation_date: number;
+	view_count: number;
 }
