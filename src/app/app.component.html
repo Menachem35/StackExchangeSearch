@@ -8,10 +8,12 @@
 			<button (click)="getSearchResults()">Search</button>
 		</label>
 		
+		<br />
+		<p>Accepted answers are highlight with yellow background</p>
 	</div>
 	
 	<div *ngFor="let results of questionsList">
-		<p>Accepted answers are highlight with yellow background</p>
+		
 		<span [ngStyle]="{'background-color':results.accepted_answer_id > 0 ? 'yellow': 'white'}">{{results.title}}</span>
 		<br />
 		<a href="{{results.link}}" target="_blank">To the question</a>
@@ -19,8 +21,8 @@
 		Tags: <span *ngFor="let questionTags of results.tags" class="questionTags">{{questionTags}} </span>
 		<br />
 		Score: {{results.score}}
+		<br />
+		Posted at: {{results.creation_date*1000 | date }}
 		<br /><br />
 	</div>
 </div>
-
-
