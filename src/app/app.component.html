@@ -1,18 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
 <div class="container">
 	<div class="searchBox">
-		 
-		<label> 
+		 <div class="searchField">
 			<input type="text" placeholder="Search for answers in StackOverflow:" [(ngModel)]="searchItem" (click)="getSearchResults()">
+		</div>
+		<div class="searchButton">
 			<button (click)="getSearchResults()">Search</button>
-		</label>
-		
-		<br />
+		</div>
+
 		<p>Accepted answers are highlight with yellow background</p>
 	</div>
 	
-	<div *ngFor="let results of questionsList">
+	<div *ngFor="let results of questionsList" class="resultsBox">
 		
 		<span [ngStyle]="{'background-color':results.accepted_answer_id > 0 ? 'yellow': 'white'}">{{results.title}}</span>
 		<br />
@@ -28,3 +26,5 @@
 		<br /><br />
 	</div>
 </div>
+
+
