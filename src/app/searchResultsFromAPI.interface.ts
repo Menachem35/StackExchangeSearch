@@ -5,4 +5,5 @@ export interface searchResultsFromAPI {
 	tags: string[];
 	title: string;
 	accepted_answer_id: number;
+	creation_date: number;
 }
